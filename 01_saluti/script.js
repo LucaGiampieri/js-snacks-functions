@@ -2,12 +2,15 @@
 
 const userName = 'Mario';
 
+const userNamePrompt = prompt('Inserisci il tuo nome');
 
 // Dichiara la funzione qui.
+const helloUser = (nameUser) => 'Ciao ' + nameUser;
 
 
 // Invoca la funzione qui e stampa il risultato in console
+console.log(helloUser(userName));
 
-
+console.log(helloUser(userNamePrompt));
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
