@@ -2,12 +2,26 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
+const userLetter = prompt('inserisci una lettera');
 
 // Dichiara la funzione qui.
 
+const oneLetterArray = (myArray, myLetter) =>{
+    const singleLetterArray = [];
+    for ( let i = 0; i < myArray.length; i++){
+        if (myArray[i].charAt(0) === myLetter.toUpperCase()){
+            singleLetterArray.push(myArray[i])
+    }
+} 
+    if (singleLetterArray.length === 0){
+        singleLetterArray.push('Nessun nome corrisponde alla tua lettera');
+    }
+    return singleLetterArray;
+}
+
 
 // Invoca la funzione qui e stampa il risultato in console
-
+console.log(oneLetterArray(names, userLetter));
 
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
