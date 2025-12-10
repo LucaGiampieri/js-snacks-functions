@@ -9,7 +9,7 @@ const userLetter = prompt('inserisci una lettera');
 const oneLetterArray = (myArray, myLetter) =>{
     const singleLetterArray = [];
     for ( let i = 0; i < myArray.length; i++){
-        if (myArray[i].charAt(0) === myLetter.toUpperCase()){
+        if (myArray[i].charAt(0).toLowerCase() === myLetter.toLowerCase()){
             singleLetterArray.push(myArray[i])
     }
 } 
